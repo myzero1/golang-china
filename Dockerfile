@@ -68,7 +68,7 @@ RUN apk update \
         && apk add --no-cache bash git
 	
 RUN go get -u github.com/golang/dep/cmd/dep
-RUN mkdir demo && cd demo && dep init
+RUN mkdir src/demo && cd src/demo && dep init
 
 RUN go get -u google.golang.org/grpc
 RUN go get -u github.com/golang/protobuf/protoc-gen-go
