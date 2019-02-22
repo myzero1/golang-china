@@ -65,6 +65,6 @@ WORKDIR $GOPATH
 RUN apk update \
         && apk upgrade \
         && apk add --no-cache bash \
-        git
+        && apk add --no-cache git
 	
 RUN go get -u google.golang.org/grpc
