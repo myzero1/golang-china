@@ -62,8 +62,12 @@ ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
 WORKDIR $GOPATH
 
+# add my myzero1
 RUN apk update \
         && apk upgrade \
         && apk add --no-cache bash git
 	
+RUN go get -u github.com/golang/dep/cmd/dep
+
 RUN go get -u google.golang.org/grpc
+
