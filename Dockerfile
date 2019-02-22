@@ -17,7 +17,6 @@ RUN set -eux; \
 		musl-dev \
 		openssl \
 		go \
-		git \
 	; \
 	export \
 # set GOROOT_BOOTSTRAP such that we can actually build Go
@@ -62,6 +61,3 @@ ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
 
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
 WORKDIR $GOPATH
-
-RUN go get -u google.golang.org/grpc
-
