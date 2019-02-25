@@ -76,3 +76,5 @@ RUN go get -u github.com/golang/protobuf/protoc-gen-go
 RUN go get -u github.com/micro/protobuf/proto
 RUN go get -u github.com/micro/protobuf/protoc-gen-go
 
+RUN go get -u github.com/gpmgo/gopm
+
